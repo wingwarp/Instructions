@@ -100,10 +100,7 @@ private extension CoachMarkBodyDefaultView {
         helper.configureNext(nextLabel, addTo: self)
         helper.configureSeparator(self.views.separator, addTo: self)
 
-        let views = (hintLabel: self.views.hintLabel, nextLabel: self.views.nextLabel,
-                     separator: self.views.separator)
-
-        self.addConstraints(helper.makeHorizontalConstraints(for: views))
+        self.addConstraints(helper.makeHorizontalConstraints(for: self.views.hintLabel))
     }
 
     func setupSimpleInnerViewHierarchy(using helper: CoachMarkBodyDefaultViewHelper) {

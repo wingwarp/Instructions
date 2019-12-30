@@ -27,13 +27,12 @@ import UIKit
 /// A concrete implementation of the coach mark body view and the
 /// default one provided by the library.
 open class CoachMarkBodyDefaultViewHelper {
-    func makeHorizontalConstraints(for views: CoachMarkBodyDefaultSubViews)
+    func makeHorizontalConstraints(for view: UITextView)
     -> [NSLayoutConstraint] {
         return NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-(10)-[hintLabel]-(10)-[separator(==1)][nextLabel(==55)]|",
+            withVisualFormat: "H:|-(10)-[hintLabel]|",
             options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil,
-            views: ["hintLabel": views.hintLabel, "separator": views.separator,
-                    "nextLabel": views.nextLabel]
+            views: ["hintLabel": view]
         )
     }
 
