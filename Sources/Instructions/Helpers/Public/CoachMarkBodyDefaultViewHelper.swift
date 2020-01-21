@@ -30,7 +30,7 @@ open class CoachMarkBodyDefaultViewHelper {
     func makeHorizontalConstraints(for view: UITextView)
     -> [NSLayoutConstraint] {
         return NSLayoutConstraint.constraints(
-            withVisualFormat: "H:|-(10)-[hintLabel]|",
+            withVisualFormat: "H:|-(10)-[hintLabel]-(10)-|",
             options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil,
             views: ["hintLabel": view]
         )
